@@ -1,0 +1,171 @@
+/* Importar estilos globales si es necesario, aunque ya se enlazan en el HTML */
+/* @import url("../css/global.css"); */
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio del eje Y */
+    min-height: 100vh;
+    margin: 0;
+    padding: 20px; /* Añadir padding general */
+    box-sizing: border-box;
+}
+
+.container {
+    background-color: #fff;
+    padding: 30px 40px;
+    border-radius: 8px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 100%;
+    max-width: 900px; /* Ancho máximo similar al de tu imagen */
+}
+
+h1 {
+    color: #333;
+    margin-bottom: 30px;
+    font-size: 2em;
+}
+
+h2 {
+    color: #555;
+    font-size: 1.2em;
+    margin-bottom: 15px;
+    text-align: left; /* Alinea los títulos de sección a la izquierda */
+}
+
+.content-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px; /* Espacio entre las secciones */
+    margin-bottom: 30px;
+    flex-wrap: wrap; /* Permite que las secciones se envuelvan en pantallas pequeñas */
+}
+
+.camera-section,
+.translation-section {
+    flex: 1; /* Hacen que ambas secciones tomen el mismo espacio */
+    min-width: 350px; /* Ancho mínimo para evitar que se pongan demasiado pequeñas */
+}
+
+.camera-feed {
+    width: 100%;
+    height: 250px; /* Altura fija para la vista de la cámara */
+    background-color: #eee;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden; /* Asegura que la imagen de la cámara no se desborde */
+}
+
+.camera-feed .webcam-placeholder {
+    max-width: 100%;
+    height: auto;
+    display: block; /* Elimina espacio extra debajo de la imagen */
+}
+
+.detected-sign {
+    text-align: left;
+    margin-top: 15px;
+    font-size: 1.1em;
+    color: #666;
+}
+
+.translation-output {
+    width: 100%;
+    height: 250px; /* Altura igual a la de la cámara */
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 15px;
+    text-align: left;
+    overflow-y: auto; /* Permite desplazamiento si el texto es muy largo */
+    line-height: 1.6;
+    color: #333;
+}
+
+.controls {
+    margin-top: 30px;
+    display: flex;
+    justify-content: center; /* Centra los botones */
+    gap: 15px; /* Espacio entre botones */
+    flex-wrap: wrap; /* Permite que los botones se envuelvan */
+}
+
+.btn {
+    padding: 12px 25px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+.btn.primary {
+    background-color: #007bff; /* Azul */
+    color: #fff;
+}
+
+.btn.primary:hover {
+    background-color: #0056b3;
+}
+
+.btn.danger {
+    background-color: #dc3545; /* Rojo */
+    color: #fff;
+}
+
+.btn.danger:hover {
+    background-color: #bd2130;
+}
+
+.btn.secondary {
+    background-color: #6c757d; /* Gris */
+    color: #fff;
+}
+
+.btn.secondary:hover {
+    background-color: #545b62;
+}
+
+.instruction {
+    margin-top: 30px;
+    font-size: 0.9em;
+    color: #777;
+}
+
+/* Media Queries para responsividad */
+@media (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column; /* Apila las secciones verticalmente */
+        align-items: center;
+    }
+
+    .camera-section,
+    .translation-section {
+        width: 100%; /* Ocupan todo el ancho disponible */
+        min-width: unset; /* Quita el mínimo ancho */
+    }
+
+    .container {
+        padding: 20px;
+    }
+
+    .controls {
+        flex-direction: column; /* Apila los botones verticalmente */
+        align-items: center;
+    }
+
+    .btn {
+        width: 100%; /* Botones de ancho completo */
+        max-width: 300px; /* Pero con un máximo para no ser demasiado anchos */
+    }
+}

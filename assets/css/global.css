@@ -1,0 +1,75 @@
+/* assets/css/global.css */
+
+/* 1. Reset Básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Fundamental para el manejo de padding y bordes */
+}
+
+/* 2. Estilos Globales de Tipografía y Fondo */
+body {
+    font-family: 'Arial', sans-serif;
+    color: #333; /* Color de texto base */
+    line-height: 1.6;
+    background-color: #f0f2f5; /* Fondo gris claro que ayuda a resaltar el contenido */
+}
+
+/* 3. Estilos Base para Contenedor Principal (si lo usas en todas las páginas) */
+.container {
+    padding: 20px;
+    margin: 0 auto;
+    max-width: 1200px;
+}
+
+/* 4. Estilos de Títulos Globales */
+h1, h2, h3 {
+    color: #1a1a1a;
+    margin-bottom: 15px;
+}
+
+/* 5. Definición de la Clase Base para Botones */
+.btn {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 1em;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* 6. Definición de Colores de Botones (Usados en realtime.html) */
+
+/* Botón Primario (e.g., Iniciar Detección) */
+.btn.primary {
+    background-color: #007bff; /* Azul vibrante */
+    color: #fff;
+}
+
+/* Botón Secundario (e.g., Limpiar, Volver) */
+.btn.secondary {
+    background-color: #6c757d; /* Gris oscuro */
+    color: #fff;
+}
+
+/* Botón de Peligro/Advertencia (e.g., Detener) */
+.btn.danger {
+    background-color: #dc3545; /* Rojo */
+    color: #fff;
+}
+
+/* Estilos para enlaces */
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}

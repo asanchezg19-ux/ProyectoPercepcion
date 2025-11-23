@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Traducción en Tiempo Real</title>
+    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="realtime.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Traducción en Tiempo Real</h1>
+
+        <div class="content-wrapper">
+            <div class="camera-section">
+                <h2>Vista de la cámara</h2>
+                <div class="camera-feed">
+                    <img src="https://via.placeholder.com/400x250?text=Webcam+Feed" alt="Webcam Feed" class="webcam-placeholder">
+                </div>
+                <p class="detected-sign">Seña detectada: —</p>
+            </div>
+
+            <div class="translation-section">
+                <h2>Traducción completa:</h2>
+                <div class="translation-output">
+                    Aquí se mostrará progresivamente la frase reconocida a partir de las señas detectadas.
+                </div>
+            </div>
+        </div>
+
+        <div class="controls">
+            <button class="btn primary" id="startDetection">Iniciar detección</button>
+            <button class="btn danger" id="stopDetection">Detener</button>
+            <button class="btn secondary" id="clearText">Limpiar texto</button>
+            <button class="btn secondary" id="goBack">Volver al inicio</button>
+        </div>
+
+        <p class="instruction">Coloca tu mano frente a la cámara con buena iluminación.</p>
+    </div>
+
+    <script src="../js/utils.js"></script>
+    <script src="realtime.js"></script>
+</body>
+</html>

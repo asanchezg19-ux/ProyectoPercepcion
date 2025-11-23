@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados - Traductor de Señas</title>
+    
+    <link rel="stylesheet" href="../assets/css/global.css">
+    <link rel="stylesheet" href="results.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <img src="../assets/img/logo.jpeg" alt="Logo UPAO" class="top-logo">
+
+    <main class="results-container">
+        
+        <h1 class="page-title">Resultados de Traducción</h1>
+
+        <div class="results-grid">
+            
+            <section class="preview-column">
+                <h3>Previsualización</h3>
+                <p class="description">Video o fotograma final utilizado para la traducción.</p>
+                
+                <div class="video-wrapper">
+                    <video id="result-video" controls class="result-media">
+                        Tu navegador no soporta videos.
+                    </video>
+                    <div id="video-placeholder" class="media-placeholder">
+                        <i class="fas fa-play-circle"></i>
+                    </div>
+                </div>
+            </section>
+
+            <section class="text-column">
+                <h3>Texto traducido</h3>
+                
+                <div class="translation-box">
+                    <p id="translation-text" class="translated-content">
+                        Aquí se mostrará el resultado final de la traducción en texto, limpio y estructurado. Puedes revisar el contenido antes de guardarlo o iniciar una nueva traducción.
+                    </p>
+                </div>
+            </section>
+
+        </div>
+
+        <div class="actions-footer">
+            <button id="btn-download" class="text-btn">
+                Guardar resultado como archivo (.txt)
+            </button>
+
+            <div class="nav-buttons">
+                <a href="../upload/upload.html" class="btn primary">Volver a traducir</a>
+                
+                <a href="../home/index.html" class="btn secondary">Ir al inicio</a>
+            </div>
+        </div>
+
+    </main>
+
+    <script src="results.js"></script>
+</body>
+</html>

@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (videoStream) {
             videoStream.getTracks().forEach(track => track.stop());
             videoStream = null;
-            cameraFeed.innerHTML = '<img src="https://via.placeholder.com/400x250?text=Webcam+Feed" alt="Webcam Feed" class="webcam-placeholder">';
+            cameraFeed.innerHTML = '<img src="../assets/img/camara.png" alt="Webcam Feed" class="webcam-placeholder">';
             console.log("Cámara detenida.");
         }
     }

@@ -1,0 +1,68 @@
+/* home/home.css */
+
+/* Hacemos que el home sea blanco como en tu imagen,
+   sobreescribiendo el gris del global solo para esta página */
+body {
+    background-color: #ffffff;
+}
+
+/* Centrado perfecto del contenido */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; /* Altura completa de la ventana */
+    padding: 20px;
+    text-align: center;
+}
+
+/* Ajustes de texto */
+.home-header h1 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #666;
+    margin-bottom: 30px;
+    font-size: 0.9rem;
+}
+
+/* Tarjeta gris de la imagen (según tu diseño) */
+.illustration-card {
+    background-color: #f8f9fa; /* Gris muy suave */
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
+    display: inline-block; /* Se ajusta al tamaño de la imagen */
+}
+
+.main-image {
+    max-width: 180px; /* Controla el tamaño de la imagen de manos */
+    display: block;
+}
+
+/* Contenedor de los botones */
+.menu-options {
+    display: flex;
+    flex-direction: column;
+    gap: 15px; /* Espacio entre botones */
+    width: 100%;
+    max-width: 400px; /* Ancho máximo para que no se estiren demasiado */
+}
+
+/* Clase extra '.home-btn' para hacerlos un poco más grandes que los botones normales */
+.home-btn {
+    width: 100%;             /* Ocupar todo el ancho del contenedor menu-options */
+    padding: 15px;           /* Más relleno que un botón normal */
+    text-align: center;      /* Texto centrado */
+    font-size: 1rem;
+    display: block;          /* Importante para que el <a> se comporte como caja */
+}
+
+/* Corrección para que el texto del enlace sea blanco (por si el global lo pone azul) */
+a.btn.primary {
+    color: #ffffff;
+    text-decoration: none;
+}

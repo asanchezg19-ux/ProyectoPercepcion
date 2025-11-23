@@ -73,3 +73,11 @@ a {
 a:hover {
     text-decoration: underline;
 }
+
+.top-logo {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    width: 50px; /* Ajusta el tamaño según necesites */
+    height: auto;
+}

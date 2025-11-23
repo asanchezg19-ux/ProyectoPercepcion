@@ -3,7 +3,7 @@ body {
 }
 
 .results-container {
-    max-width: 1000px; /* Un poco más ancho para que quepan las dos columnas */
+    max-width: 1000px;
     margin: 40px auto;
     padding: 0 20px;
 }
@@ -18,15 +18,15 @@ body {
 /* --- GRID DE DOS COLUMNAS --- */
 .results-grid {
     display: flex;
-    flex-wrap: wrap; /* Para que en celulares baje una debajo de otra */
-    gap: 40px;       /* Espacio entre el video y el texto */
+    flex-wrap: wrap; 
+    gap: 40px;      
     margin-bottom: 60px;
 }
 
 /* Estilos compartidos para columnas */
 .preview-column, .text-column {
-    flex: 1;         /* Ambas ocupan el mismo ancho (50%) */
-    min-width: 300px; /* Ancho mínimo antes de colapsar */
+    flex: 1;         
+    min-width: 300px; 
 }
 
 h3 {
@@ -47,7 +47,7 @@ h3 {
     background-color: #000;
     border-radius: 8px;
     overflow: hidden;
-    aspect-ratio: 16/9; /* Mantiene formato panorámico */
+    aspect-ratio: 16/9; 
     position: relative;
     display: flex;
     align-items: center;
@@ -57,7 +57,7 @@ h3 {
 .result-media {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Ajusta el video para llenar el cuadro */
+    object-fit: cover; 
 }
 
 .media-placeholder {
@@ -67,7 +67,6 @@ h3 {
 
 /* --- CAJA DE TEXTO --- */
 .translation-box {
-    /* No tiene borde visible en tu diseño, pero le damos espacio */
     margin-top: 10px;
 }
 
@@ -81,8 +80,8 @@ h3 {
 .actions-footer {
     display: flex;
     align-items: center;
-    justify-content: space-between; /* Separa "Guardar" de los botones */
-    border-top: 1px solid #eee;     /* Una línea sutil separadora (opcional) */
+    justify-content: space-between; 
+    border-top: 1px solid #eee;   
     padding-top: 30px;
 }
 
@@ -108,10 +107,53 @@ h3 {
     gap: 15px;
 }
 
-/* Ajuste responsive para móviles */
+/* --- NUEVO: RESPONSIVE --- */
 @media (max-width: 768px) {
-    .actions-footer {
+    
+    .results-container {
+        margin: 20px auto; /* Menos margen arriba/abajo */
+    }
+
+    .page-title {
+        font-size: 1.6rem;
+        margin-bottom: 30px;
+    }
+
+    /* Forzar que las columnas se pongan una debajo de otra */
+    .results-grid {
         flex-direction: column;
+        gap: 30px;
+        margin-bottom: 30px;
+    }
+
+    /* Asegurar que ocupen el 100% del ancho */
+    .preview-column, .text-column {
+        min-width: 100%;
+    }
+
+    /* Reorganizar el pie de página */
+    .actions-footer {
+        flex-direction: column; /* Apilar elementos verticalmente */
         gap: 20px;
+        align-items: stretch; /* Estirar botones a lo ancho */
+    }
+
+    /* El enlace de guardar se centra y se hace más grande para el dedo */
+    .text-btn {
+        text-align: center;
+        padding: 10px;
+        order: 2; /* Opcional: Si quieres que aparezca debajo de los botones, pon order: 2 */
+    }
+
+    /* Botones de navegación apilados */
+    .nav-buttons {
+        flex-direction: column;
+        width: 100%;
+        order: 1; /* Los botones van primero */
+    }
+
+    .nav-buttons .btn {
+        width: 100%;
+        text-align: center;
     }
 }

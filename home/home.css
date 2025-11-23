@@ -25,17 +25,17 @@ body {
     font-size: 0.9rem;
 }
 
-/* Tarjeta gris de la imagen (según tu diseño) */
+/* Tarjeta gris de la imagen */
 .illustration-card {
     background-color: #f8f9fa; /* Gris muy suave */
     padding: 20px;
     border-radius: 10px;
     margin-bottom: 30px;
-    display: inline-block; /* Se ajusta al tamaño de la imagen */
+    display: inline-block;
 }
 
 .main-image {
-    max-width: 180px; /* Controla el tamaño de la imagen de manos */
+    max-width: 180px; /* Tamaño normal en PC */
     display: block;
 }
 
@@ -43,22 +43,57 @@ body {
 .menu-options {
     display: flex;
     flex-direction: column;
-    gap: 15px; /* Espacio entre botones */
+    gap: 15px; 
     width: 100%;
-    max-width: 400px; /* Ancho máximo para que no se estiren demasiado */
+    max-width: 400px;
 }
 
-/* Clase extra '.home-btn' para hacerlos un poco más grandes que los botones normales */
+/* Estilos de botones del home */
 .home-btn {
-    width: 100%;             /* Ocupar todo el ancho del contenedor menu-options */
-    padding: 15px;           /* Más relleno que un botón normal */
-    text-align: center;      /* Texto centrado */
+    width: 100%;             
+    padding: 15px;           
+    text-align: center;      
     font-size: 1rem;
-    display: block;          /* Importante para que el <a> se comporte como caja */
+    display: block;          
 }
 
-/* Corrección para que el texto del enlace sea blanco (por si el global lo pone azul) */
+/* Corrección para que el texto sea blanco */
 a.btn.primary {
     color: #ffffff;
     text-decoration: none;
+}
+
+/* --- NUEVO: RESPONSIVE --- */
+@media (max-width: 768px) {
+    
+    /* El contenedor se ajusta para que el logo no tape el contenido */
+    .home-container {
+        padding-top: 80px; /* Espacio extra arriba para el logo */
+        justify-content: center; /* Mantiene el centrado */
+    }
+
+    /* Texto del título un poco más pequeño */
+    .home-header h1 {
+        font-size: 1.6rem;
+    }
+
+    /* Imagen más pequeña para ahorrar espacio */
+    .main-image {
+        max-width: 140px;
+    }
+
+    .illustration-card {
+        padding: 15px;
+        margin-bottom: 20px;
+    }
+
+    /* Botones un poco más compactos pero fáciles de tocar */
+    .home-btn {
+        padding: 12px; 
+        font-size: 0.95rem;
+    }
+    
+    .menu-options {
+        gap: 12px;
+    }
 }

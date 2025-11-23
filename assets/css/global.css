@@ -1,21 +1,20 @@
-/* assets/css/global.css */
 
 /* 1. Reset Básico */
 * {
     margin: 0;
     padding: 0;
-    box-sizing: border-box; /* Fundamental para el manejo de padding y bordes */
+    box-sizing: border-box; 
 }
 
 /* 2. Estilos Globales de Tipografía y Fondo */
 body {
     font-family: 'Arial', sans-serif;
-    color: #333; /* Color de texto base */
+    color: #333; 
     line-height: 1.6;
-    background-color: #f0f2f5; /* Fondo gris claro que ayuda a resaltar el contenido */
+    background-color: #f0f2f5; 
 }
 
-/* 3. Estilos Base para Contenedor Principal (si lo usas en todas las páginas) */
+/* 3. Estilos Base para Contenedor Principal */
 .container {
     padding: 20px;
     margin: 0 auto;
@@ -44,21 +43,17 @@ h1, h2, h3 {
     transform: translateY(-1px);
 }
 
-/* 6. Definición de Colores de Botones (Usados en realtime.html) */
-
-/* Botón Primario (e.g., Iniciar Detección) */
+/* 6. Definición de Colores de Botones */
 .btn.primary {
     background-color: #007bff; /* Azul vibrante */
     color: #fff;
 }
 
-/* Botón Secundario (e.g., Limpiar, Volver) */
 .btn.secondary {
     background-color: #6c757d; /* Gris oscuro */
     color: #fff;
 }
 
-/* Botón de Peligro/Advertencia (e.g., Detener) */
 .btn.danger {
     background-color: #dc3545; /* Rojo */
     color: #fff;
@@ -74,10 +69,37 @@ a:hover {
     text-decoration: underline;
 }
 
+/* Logo en la esquina superior */
 .top-logo {
     position: absolute;
     top: 20px;
     right: 20px;
-    width: 50px; /* Ajusta el tamaño según necesites */
+    width: 50px;
     height: auto;
+    z-index: 1000;
+}
+
+/* --- RESPONSIVE  --- */
+@media (max-width: 768px) {
+    /* Texto base un poco más pequeño  */
+    body {
+        font-size: 14px; 
+    }
+
+    /* Títulos más pequeños para que no ocupen toda la pantalla */
+    h1 {
+        font-size: 1.5rem; 
+    }
+    
+    /* Márgenes reducidos */
+    .container {
+        padding: 15px;
+    }
+
+    /* Logo ajustado */
+    .top-logo {
+        width: 40px;
+        top: 15px;
+        right: 15px;
+    }
 }

@@ -3,10 +3,10 @@ body {
     background-color: #f0f2f5;
     display: flex;
     justify-content: center;
-    align-items: flex-start; /* Alinea al inicio del eje Y */
+    align-items: flex-start; /* Alinea al inicio para evitar cortes en pantallas pequeñas */
     min-height: 100vh;
     margin: 0;
-    padding: 20px; /* Añadir padding general */
+    padding: 20px;
     box-sizing: border-box;
 }
 
@@ -17,7 +17,8 @@ body {
     box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
     text-align: center;
     width: 100%;
-    max-width: 900px; /* Ancho máximo similar al de tu imagen */
+    max-width: 900px; 
+    margin-top: 20px; /* Un poco de aire arriba */
 }
 
 h1 {
@@ -30,39 +31,48 @@ h2 {
     color: #555;
     font-size: 1.2em;
     margin-bottom: 15px;
-    text-align: left; /* Alinea los títulos de sección a la izquierda */
+    text-align: left;
 }
 
 .content-wrapper {
     display: flex;
     justify-content: space-between;
-    gap: 30px; /* Espacio entre las secciones */
+    gap: 30px;
     margin-bottom: 30px;
-    flex-wrap: wrap; /* Permite que las secciones se envuelvan en pantallas pequeñas */
+    flex-wrap: wrap; 
 }
 
 .camera-section,
 .translation-section {
-    flex: 1; /* Hacen que ambas secciones tomen el mismo espacio */
-    min-width: 350px; /* Ancho mínimo para evitar que se pongan demasiado pequeñas */
+    flex: 1; 
+    min-width: 350px; /* En PC mantiene un ancho mínimo */
 }
 
 .camera-feed {
     width: 100%;
-    height: 250px; /* Altura fija para la vista de la cámara */
+    height: 250px; 
     background-color: #eee;
     border: 1px solid #ddd;
     border-radius: 5px;
     display: flex;
     justify-content: center;
     align-items: center;
-    overflow: hidden; /* Asegura que la imagen de la cámara no se desborde */
+    overflow: hidden; 
+    position: relative; /* Para posicionar elementos dentro si fuera necesario */
+}
+
+/* Ajuste para que el video llene el contenedor */
+.camera-feed video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scaleX(-1); /* Efecto espejo */
 }
 
 .camera-feed .webcam-placeholder {
     max-width: 100%;
     height: auto;
-    display: block; /* Elimina espacio extra debajo de la imagen */
+    display: block; 
 }
 
 .detected-sign {
@@ -74,13 +84,13 @@ h2 {
 
 .translation-output {
     width: 100%;
-    height: 250px; /* Altura igual a la de la cámara */
+    height: 250px; 
     background-color: #f9f9f9;
     border: 1px solid #ddd;
     border-radius: 5px;
     padding: 15px;
     text-align: left;
-    overflow-y: auto; /* Permite desplazamiento si el texto es muy largo */
+    overflow-y: auto; 
     line-height: 1.6;
     color: #333;
 }
@@ -88,9 +98,9 @@ h2 {
 .controls {
     margin-top: 30px;
     display: flex;
-    justify-content: center; /* Centra los botones */
-    gap: 15px; /* Espacio entre botones */
-    flex-wrap: wrap; /* Permite que los botones se envuelvan */
+    justify-content: center;
+    gap: 15px; 
+    flex-wrap: wrap; 
 }
 
 .btn {
@@ -107,7 +117,7 @@ h2 {
 }
 
 .btn.primary {
-    background-color: #007bff; /* Azul */
+    background-color: #007bff;
     color: #fff;
 }
 
@@ -116,7 +126,7 @@ h2 {
 }
 
 .btn.danger {
-    background-color: #dc3545; /* Rojo */
+    background-color: #dc3545;
     color: #fff;
 }
 
@@ -125,7 +135,7 @@ h2 {
 }
 
 .btn.secondary {
-    background-color: #6c757d; /* Gris */
+    background-color: #6c757d;
     color: #fff;
 }
 
@@ -139,30 +149,48 @@ h2 {
     color: #777;
 }
 
-/* Media Queries para responsividad */
+/* --- RESPONSIVE  --- */
 @media (max-width: 768px) {
-    .content-wrapper {
-        flex-direction: column; /* Apila las secciones verticalmente */
-        align-items: center;
-    }
-
-    .camera-section,
-    .translation-section {
-        width: 100%; /* Ocupan todo el ancho disponible */
-        min-width: unset; /* Quita el mínimo ancho */
+    
+    body {
+        padding: 10px; /* Menos relleno en el borde de la pantalla */
     }
 
     .container {
         padding: 20px;
+        margin-top: 60px; /* Espacio extra para que el logo superior no tape el título */
+    }
+
+    h1 {
+        font-size: 1.6rem; /* Título más pequeño */
+    }
+
+    .content-wrapper {
+        flex-direction: column; /* Apila cámara y texto */
+        gap: 20px;
+    }
+
+    .camera-section,
+    .translation-section {
+        width: 100%; 
+        min-width: 0; /* Importante para que no se desborde */
+    }
+
+    /* Reducimos un poco la altura  para que quepa todo */
+    .camera-feed, 
+    .translation-output {
+        height: 220px; 
     }
 
     .controls {
-        flex-direction: column; /* Apila los botones verticalmente */
-        align-items: center;
+        flex-direction: column; /* Botones uno debajo del otro */
+        width: 100%;
+        gap: 15px;
     }
 
     .btn {
-        width: 100%; /* Botones de ancho completo */
-        max-width: 300px; /* Pero con un máximo para no ser demasiado anchos */
+        width: 100%; /* Botones ocupan todo el ancho */
+        max-width: none; /* Quitamos límites de ancho */
+        text-align: center;
     }
 }

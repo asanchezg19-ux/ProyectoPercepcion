@@ -1,5 +1,3 @@
-// home/home.js
-
 document.addEventListener('DOMContentLoaded', () => {
     const btnAbout = document.getElementById('btn-about');
 

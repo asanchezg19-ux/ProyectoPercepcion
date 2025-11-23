@@ -1,7 +1,3 @@
-/* home/home.css */
-
-/* Hacemos que el home sea blanco como en tu imagen,
-   sobreescribiendo el gris del global solo para esta página */
 body {
     background-color: #ffffff;
 }

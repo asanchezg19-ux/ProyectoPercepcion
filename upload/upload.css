@@ -1,0 +1,126 @@
+body {
+    background-color: #ffffff;
+}
+
+.upload-container {
+    max-width: 800px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.page-title {
+    text-align: center;
+    margin-bottom: 30px;
+    font-size: 1.8rem;
+}
+
+/* --- SECCIÓN 1: CAJA DE SUBIDA --- */
+.upload-box {
+    background-color: #f8f9fa;
+    border-radius: 12px;
+    padding: 40px 20px;
+    text-align: center;
+    margin-bottom: 40px;
+    border: 2px dashed #e9ecef;
+    transition: border-color 0.3s;
+}
+
+.upload-box:hover {
+    border-color: #007bff;
+}
+
+.upload-icon {
+    font-size: 2rem;
+    color: #6c757d;
+    margin-bottom: 15px;
+    border: 2px solid #ddd;
+    padding: 10px;
+    border-radius: 8px;
+    width: 50px;
+    height: 50px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.upload-text {
+    margin-bottom: 20px;
+    font-weight: 500;
+}
+
+.upload-hint {
+    margin-top: 15px;
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* --- CABECERAS --- */
+.section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 15px;
+}
+
+.section-header h3 {
+    font-size: 1rem;
+    font-weight: bold;
+    margin: 0;
+}
+
+.helper-text {
+    font-size: 0.85rem;
+    color: #999;
+}
+
+/* --- SECCIÓN 2: VIDEO --- */
+.video-preview-container {
+    width: 100%;
+    background-color: #000;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 20px;
+    min-height: 400px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-player {
+    width: 100%;
+    height: 100%;
+    display: none;
+}
+
+.no-video-placeholder {
+    color: #666;
+    background-color: #eee;
+    width: 100%;
+    height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* --- BOTÓN PROCESAR --- */
+.action-row {
+    display: flex;
+    justify-content: flex-end;
+    margin-bottom: 60px; /* Un poco más de margen inferior ahora */
+}
+
+/* --- FOOTER (Volver) --- */
+.footer-action {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+
+.footer-action .btn.secondary {
+    background-color: #f1f3f5;
+    color: #333;
+}
+.footer-action .btn.secondary:hover {
+    background-color: #e2e6ea;
+}

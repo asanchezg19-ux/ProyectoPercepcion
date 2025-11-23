@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
             e.preventDefault(); 
 
             // Aquí tu lógica (por ahora un alert)
-            alert('Proyecto de Percepción Computacional - UPAO\n\nIntegrantes:\n- Mendoza Bacilio Brayan Daniel\n- Sanchez Guzman Ana Cristina\n- Compañero 2');
+            alert('Proyecto de Percepción Computacional - UPAO\n\nIntegrantes:\n- Sanchez Vargas, Adrian Olaf\n- Sanchez Guzman Ana Cristina\n- Mendoza Bacilio, Brayan Daniel\n- Llaure Calipuy, Oscar\n- Vera Romero, Vanesa');
         });
     }
 });
